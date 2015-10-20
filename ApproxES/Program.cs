@@ -170,9 +170,8 @@ namespace ApproxES
                             shiva.CanBeCasted() &&
                             me.CanCast() &&
                             !target.IsMagicImmune() &&
-                            (shiva.CanBeCasted() &&
                             Utils.SleepCheck("shiva") &&
-                            me.Distance2D(target) <= 600)
+                            me.Distance2D(target) <= 600
                             )
                         {
                             shiva.UseAbility();
@@ -184,8 +183,7 @@ namespace ApproxES
                             dagon.CanBeCasted() &&
                             me.CanCast() &&
                             !target.IsMagicImmune() &&
-                            (dagon.CanBeCasted() &&
-                            Utils.SleepCheck("dagon"))
+                            Utils.SleepCheck("dagon")
                            )
                         {
                             dagon.UseAbility(target);
@@ -197,8 +195,7 @@ namespace ApproxES
                             veilofdiscord.CanBeCasted() &&
                             me.CanCast() &&
                             !target.IsMagicImmune() &&
-                            (veilofdiscord.CanBeCasted() &&
-                            Utils.SleepCheck("veilofdiscord"))
+                            Utils.SleepCheck("veilofdiscord")
                            )
                         {
                             veilofdiscord.UseAbility(target.Position);
@@ -206,18 +203,16 @@ namespace ApproxES
                         }
 
                         if (
-                            // Stick
-                            (stick != null && stick.CanBeCasted()) ||
-                            (wand != null && wand.CanBeCasted()) ||
+                            // Cheese
+                            
                             (cheese != null && cheese.CanBeCasted()) &&
-                            Utils.SleepCheck("stick") &&
+                            Utils.SleepCheck("cheese") &&
                             me.Distance2D(target) <= 700)
                         {
-                            stick.UseAbility();
-                            wand.UseAbility();
+                            
                             cheese.UseAbility();
-                            Utils.Sleep(150 + Game.Ping, "stick");
-                        } // Stick Item end
+                            Utils.Sleep(150 + Game.Ping, "cheese");
+                        } // Cheese Item end
                     }
                 }
             }
